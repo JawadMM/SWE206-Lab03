@@ -5,22 +5,18 @@ public class Sorter {
         
     }
 
-    public static void selectionSort(Double[] array) {
+    public static void insertionSort(double[] array) {
+        
         for (int i = 0; i < array.length; i++) {
-            double currentMin = array[i];
-            int currentMinIndex = i;
 
-            for (int j = i + 1; j < array.length; j++) {
-                if (currentMin > array[j]) {
-                    currentMin = array[j];
-                    currentMinIndex = j;
-                }
+            double currentElement = array[i];
+            int k;
+
+            for (k = i - 1; k >= 0 && currentElement < array[k]; k--) {
+                array[k+1] = array[k];
             }
 
-            if (currentMinIndex != i) {
-                array[currentMinIndex] = array[i];
-                array[i] = currentMin;
-            }
+            array[k + 1] = currentElement;
         }
     }
 

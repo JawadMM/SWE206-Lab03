@@ -18,6 +18,10 @@ public class Sorter {
 
             array[k + 1] = currentElement;
         }
+
+    }
+    public static void Sort(double[] array) {
+        insertionSort(array);
     }
 
 }

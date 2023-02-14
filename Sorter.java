@@ -5,7 +5,7 @@ public class Sorter {
         
     }
 
-    public static void selectionSort(Double[] array) {
+    public static void selectionSort(double[] array) {
         for (int i = 0; i < array.length; i++) {
             double currentMin = array[i];
             int currentMinIndex = i;
@@ -22,6 +22,10 @@ public class Sorter {
                 array[i] = currentMin;
             }
         }
+    }
+
+    public static void Sort(double[] array) {
+        selectionSort(array);
     }
 
 }
